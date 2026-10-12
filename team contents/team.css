@@ -1,0 +1,3307 @@
+/* ============================================================
+   TEAM PAGE
+   Healing Heart Initiative
+   ============================================================ */
+
+
+/* ============================================================
+   1. ROOT VARIABLES
+   ============================================================ */
+
+:root {
+
+    --primary: #024b40;
+    --primary-dark: #013c34;
+
+    --orange: #f68221;
+    --orange-dark: #dc6f12;
+
+    --white: #ffffff;
+    --black: #111111;
+
+    --text: #333333;
+    --text-light: #666666;
+
+    --background: #f8faf9;
+    --light-green: #eef5f3;
+
+    --border: #e3e8e6;
+
+    --shadow-sm:
+        0 5px 18px rgba(0, 0, 0, 0.05);
+
+    --shadow-md:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    --container: 1180px;
+
+}
+
+
+/* ============================================================
+   2. GLOBAL RESET
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text);
+
+    background: var(--white);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+button {
+    border: 0;
+
+    cursor: pointer;
+}
+
+
+.container {
+    width: min(
+        92%,
+        var(--container)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ============================================================
+   3. HEADER
+   ============================================================ */
+
+.site-header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.97
+    );
+
+    border-bottom: 1px solid transparent;
+
+    transition:
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+/* Header after scrolling */
+
+.site-header.scrolled {
+
+    border-color: var(--border);
+
+    box-shadow:
+        0 5px 20px rgba(
+            0,
+            0,
+            0,
+            0.07
+        );
+
+}
+
+
+/* ============================================================
+   4. NAVIGATION CONTAINER
+   ============================================================ */
+
+.nav-container {
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+}
+
+
+/* ============================================================
+   5. LOGO
+   ============================================================ */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+}
+
+
+.logo img {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: contain;
+
+}
+
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.2;
+
+}
+
+
+.logo-text strong {
+
+    color: var(--primary);
+
+    font-size: 0.92rem;
+
+}
+
+
+.logo-text small {
+
+    margin-top: 3px;
+
+    color: var(--text-light);
+
+    font-size: 0.63rem;
+
+}
+
+
+/* ============================================================
+   6. DESKTOP NAVIGATION
+   ============================================================ */
+
+.desktop-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.desktop-nav a {
+
+    position: relative;
+
+    padding: 8px 0;
+
+    color: var(--text);
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease;
+
+}
+
+
+/* Navigation hover */
+
+.desktop-nav a:hover {
+
+    color: var(--primary);
+
+}
+
+
+/* Active navigation */
+
+.desktop-nav a.active {
+
+    color: var(--primary);
+
+}
+
+
+/* Active navigation underline */
+
+.desktop-nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: var(--orange);
+
+    border-radius: 5px;
+
+}
+
+
+/* ============================================================
+   7. BUTTONS
+   ============================================================ */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+
+}
+
+
+.btn:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* Orange button */
+
+.btn-orange {
+
+    color: var(--white);
+
+    background: var(--orange);
+
+}
+
+
+.btn-orange:hover {
+
+    background: var(--orange-dark);
+
+}
+
+
+/* Outline button */
+
+.btn-outline {
+
+    color: var(--primary);
+
+    background: transparent;
+
+    border: 1px solid var(--primary);
+
+}
+
+
+.btn-outline:hover {
+
+    color: var(--white);
+
+    background: var(--primary);
+
+}
+
+
+/* Ghost button */
+
+.btn-ghost {
+
+    color: var(--white);
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.7
+    );
+
+    background: transparent;
+
+}
+
+
+.btn-ghost:hover {
+
+    color: var(--primary);
+
+    background: var(--white);
+
+}
+
+
+.btn-large {
+
+    padding: 13px 23px;
+
+}
+
+
+/* ============================================================
+   8. NAVIGATION ACTIONS
+   ============================================================ */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+/* ============================================================
+   9. MOBILE MENU BUTTON
+   ============================================================ */
+
+.menu-btn {
+
+    display: none;
+
+    width: 43px;
+
+    height: 43px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--primary);
+
+    background: var(--light-green);
+
+    border-radius: 8px;
+
+    font-size: 1.35rem;
+
+}
+
+
+/* ============================================================
+   10. MOBILE MENU OVERLAY
+   ============================================================ */
+
+.menu-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1100;
+
+    background: rgba(
+        0,
+        0,
+        0,
+        0.45
+    );
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+
+}
+
+
+.menu-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* ============================================================
+   11. MOBILE MENU
+   ============================================================ */
+
+.mobile-menu {
+
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    width: min(
+        320px,
+        86%
+    );
+
+    height: 100vh;
+
+    z-index: 1200;
+
+    padding: 25px;
+
+    background: var(--white);
+
+    box-shadow:
+        -10px 0 30px rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+
+    transform: translateX(100%);
+
+    visibility: hidden;
+
+    transition:
+        transform 0.25s ease,
+        visibility 0.25s ease;
+
+}
+
+
+.mobile-menu.active {
+
+    transform: translateX(0);
+
+    visibility: visible;
+
+}
+
+
+/* Mobile menu header */
+
+.mobile-menu-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.mobile-menu-header span {
+
+    color: var(--primary);
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+}
+
+
+.menu-close {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--primary);
+
+    background: var(--light-green);
+
+    border-radius: 8px;
+
+    font-size: 1.3rem;
+
+}
+
+
+/* ============================================================
+   12. MOBILE NAVIGATION LINKS
+   ============================================================ */
+
+.mobile-nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 25px;
+
+}
+
+
+.mobile-nav a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px;
+
+    color: var(--text);
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.mobile-nav a i {
+
+    width: 22px;
+
+    font-size: 1.15rem;
+
+}
+
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+
+    color: var(--primary);
+
+    background: var(--light-green);
+
+}
+
+
+/* ============================================================
+   13. MOBILE ACTION BUTTONS
+   ============================================================ */
+
+.mobile-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+}
+
+
+.mobile-actions .btn {
+
+    width: 100%;
+
+}
+
+/*==================================================
+                    TEAM HERO
+==================================================*/
+
+.team-hero{
+    position: relative;
+    overflow: hidden;
+    padding: 170px 0 120px;
+    background: linear-gradient(135deg,#024b40 0%,#046b5a 100%);
+}
+
+/* Decorative circles */
+
+.hero-shape{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+    z-index:1;
+}
+
+.hero-shape-1{
+    width:380px;
+    height:380px;
+    top:-120px;
+    right:-120px;
+}
+
+.hero-shape-2{
+    width:220px;
+    height:220px;
+    bottom:40px;
+    left:-90px;
+}
+
+/* Container */
+
+.hero-wrapper{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+
+/* LEFT */
+
+.hero-content{
+    color:#fff;
+}
+
+.hero-content .section-subtitle{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(246,130,33,.15);
+
+    color:#f68221;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:25px;
+
+}
+
+.hero-content h1{
+
+    font-size:4rem;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    color:#fff;
+
+}
+
+.hero-content h1 span{
+
+    color:#f68221;
+
+}
+
+.hero-content p{
+
+    color:#d7e6e2;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+    max-width:620px;
+
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+/* Statistics */
+
+.hero-stats{
+
+    display:flex;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-stats div{
+
+    position:relative;
+
+}
+
+.hero-stats div:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-20px;
+
+    top:8px;
+
+    width:1px;
+
+    height:45px;
+
+    background:rgba(255,255,255,.2);
+
+}
+
+.hero-stats h3{
+
+    color:#fff;
+
+    font-size:2.2rem;
+
+    margin-bottom:6px;
+
+}
+
+.hero-stats span{
+
+    color:#d7e6e2;
+
+    font-size:.95rem;
+
+}
+
+/* RIGHT */
+
+.hero-image{
+
+    position:relative;
+
+}
+
+.hero-image img{
+
+    width:100%;
+    
+    border-radius:28px;
+
+    display:block;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+}
+
+/* Floating Cards */
+
+.floating-card{
+
+    position:absolute;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.15);
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+.floating-card i{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#f68221;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.5rem;
+
+}
+
+.floating-card h4{
+
+    color:#024b40;
+
+    margin-bottom:5px;
+
+    font-size:1rem;
+
+}
+
+.floating-card span{
+
+    color:#666;
+
+    font-size:.9rem;
+
+}
+
+.top-card{
+
+    top:-5px;
+
+    left:-90px;
+
+}
+
+.bottom-card{
+
+    bottom:-35px;
+
+    right:-50px;
+
+    animation-delay:2s;
+
+}
+
+/* Floating animation */
+
+@keyframes float{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+    .hero-wrapper{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        max-width:800px;
+
+        margin:auto;
+
+    }
+
+    .hero-content p{
+
+        margin-inline:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-stats{
+
+        justify-content:center;
+
+    }
+
+    .hero-image{
+
+        max-width:650px;
+
+        margin:auto;
+
+    }
+
+    .top-card{
+
+        left:20px;
+
+    }
+
+    .bottom-card{
+
+        right:20px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .team-hero{
+
+        padding:130px 0 80px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .hero-stats{
+
+        gap:25px;
+
+    }
+
+    .hero-stats div::after{
+
+        display:none;
+
+    }
+
+    .floating-card{
+
+        position:relative;
+
+        margin-top:20px;
+
+        left:auto;
+
+        right:auto;
+
+        top:auto;
+
+        bottom:auto;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hero-content h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .hero-buttons a{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .hero-stats{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
+/*==================================================
+                TEAM STATISTICS
+==================================================*/
+
+.team-stats{
+
+    padding:100px 0;
+
+    background:#f8fafc;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.stat-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+}
+
+.stat-card h2{
+
+    font-size:3rem;
+
+    color:#0f172a;
+
+    margin-bottom:12px;
+
+}
+
+.stat-card p{
+
+    color:#64748b;
+
+    font-size:1rem;
+
+    line-height:1.6;
+
+}
+/*==================================================
+            TEAM STATS RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .team-stats{
+
+        padding:80px 0;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stat-card{
+
+        padding:35px 25px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+
+
+/* ============================================================
+   15. GENERAL SECTION
+   ============================================================ */
+
+.section {
+
+    padding: 90px 0;
+
+}
+
+
+.section-heading {
+
+    max-width: 760px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: var(--orange);
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.section-heading h2 {
+
+    margin-bottom: 15px;
+
+    color: var(--primary);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3rem
+    );
+
+    line-height: 1.15;
+
+}
+
+
+.section-heading h2 span {
+
+    color: var(--orange);
+
+}
+
+
+.section-heading p {
+
+    color: var(--text-light);
+
+    line-height: 1.7;
+
+}
+
+/*=========================================
+        SECTION HEADER
+=========================================*/
+
+.section-header{
+
+    max-width:750px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.section-subtitle{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:rgba(246,130,33,.12);
+
+    color:#f68221;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    border-radius:30px;
+
+    margin-bottom:20px;
+
+}
+
+.section-header h2{
+
+    font-size:clamp(2.2rem,5vw,3.5rem);
+
+    line-height:1.2;
+
+    font-weight:700;
+
+    color:#024b40;
+
+    margin-bottom:22px;
+
+}
+
+.section-header h2 span{
+
+    color:#f68221;
+
+}
+
+.section-header p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    color:#666;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .section-header{
+
+        margin-bottom:50px;
+
+    }
+
+    .section-header h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .section-header p{
+
+        font-size:1rem;
+
+    }
+
+}
+
+/* ============================================================
+   16. TEAM INTRODUCTION
+   ============================================================ */
+
+.team-intro {
+
+    background: var(--white);
+
+}
+
+
+/* ============================================================
+   17. TEAM VALUES
+   ============================================================ */
+
+.team-values {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+}
+
+
+.value-card {
+
+    padding: 28px 23px;
+
+    text-align: center;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.value-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+
+.value-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 17px;
+
+    color: var(--orange);
+
+    background: rgba(
+        246,
+        130,
+        33,
+        0.1
+    );
+
+    border-radius: 50%;
+
+    font-size: 1.45rem;
+
+}
+
+
+.value-card h3 {
+
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-size: 1.05rem;
+
+}
+
+
+.value-card p {
+
+    color: var(--text-light);
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+
+}
+
+
+/*=========================================
+        LEADERSHIP SECTION
+=========================================*/
+
+.leadership-section{
+
+    padding:120px 0;
+
+    background:#f8f9fb;
+
+}
+
+.leadership-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:40px;
+
+    margin-top:70px;
+
+}
+
+.leader-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    display:grid;
+
+    grid-template-columns:280px 1fr;
+
+    align-items:center;
+
+    gap:45px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.leader-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 55px rgba(0,0,0,.12);
+
+}
+
+.founder{
+
+    border-left:8px solid #024b40;
+
+}
+
+.cofounder{
+
+    grid-template-columns:1fr 280px;
+
+    border-right:8px solid #f68221;
+
+}
+
+.leader-image {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 6px solid #024b40;
+    transition: .4s;
+}
+
+.cofounder .leader-image img{
+
+    border-color:#f68221;
+
+}
+
+.leader-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.leader-info h3{
+
+    font-size:2rem;
+
+    color:#024b40;
+
+    margin-bottom:8px;
+
+}
+
+.leader-info h4{
+
+    color:#f68221;
+
+    margin-bottom:25px;
+
+    font-size:1.1rem;
+
+}
+
+.leader-info p{
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:25px;
+
+}
+
+.leader-info blockquote{
+
+    font-style:italic;
+
+    color:#024b40;
+
+    border-left:4px solid #f68221;
+
+    padding-left:20px;
+
+    margin-bottom:30px;
+
+}
+
+.leader-info blockquote i{
+
+    color:#f68221;
+
+    font-size:28px;
+
+}
+
+.leader-social{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.leader-social a{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#024b40;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:.35s;
+
+}
+
+.leader-social a:hover{
+
+    background:#f68221;
+
+    transform:translateY(-5px) rotate(360deg);
+
+}
+
+@media(max-width:992px){
+
+    .leader-card,
+
+    .cofounder{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .cofounder .leader-image{
+
+        order:-1;
+
+    }
+
+    .leader-social{
+
+        justify-content:center;
+
+    }
+
+    .leader-info blockquote{
+
+        border-left:none;
+
+        border-top:4px solid #f68221;
+
+        padding-top:20px;
+
+        padding-left:0;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .leader-image img{
+
+        width:190px;
+
+        height:190px;
+
+    }
+
+    .leader-info h3{
+
+        font-size:1.6rem;
+
+    }
+
+}
+
+/*=========================================
+        EXECUTIVE COMMITTEE
+=========================================*/
+
+.executive-team{
+    padding:120px 0;
+    background:#f8fafc;
+}
+
+.executive-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:60px;
+}
+
+.committee-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s ease;
+    border-top:5px solid #024b40;
+}
+
+.committee-card:nth-child(even){
+    border-top-color:#f68221;
+}
+
+.committee-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.committee-card img {
+    width: 240px;
+    height: 240px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 4px solid #024b40;
+    transition: .35s;
+}
+
+.committee-card:nth-child(even) img{
+    border-color:#f68221;
+}
+
+.committee-card:hover img{
+    transform:scale(1.08);
+}
+
+.committee-card h3{
+    color:#024b40;
+    font-size:1.2rem;
+    margin-bottom:8px;
+    line-height:1.4;
+}
+
+.committee-card span{
+    display:block;
+    color:#f68221;
+    font-size:.95rem;
+    font-weight:600;
+    min-height:45px;
+    margin-bottom:20px;
+}
+
+.committee-social{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.committee-social a{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#024b40;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.committee-card:nth-child(even) .committee-social a{
+    background:#f68221;
+}
+
+.committee-social a:hover{
+    transform:translateY(-5px) rotate(360deg);
+    opacity:.9;
+}
+
+@media(max-width:768px){
+
+    .executive-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/*=========================================
+        ADVISORY BOARD
+=========================================*/
+
+.advisory-board{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.advisory-grid{
+
+    display:grid;
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+.advisor-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    background:#f8fafc;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border-left:6px solid #024b40;
+
+}
+
+.advisor-card:nth-child(even){
+
+    border-left-color:#f68221;
+
+}
+
+.advisor-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.advisor-card img {
+    width: 240px;
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 5px solid #024b40;
+}
+.advisor-card:nth-child(even) img{
+
+    border-color:#f68221;
+
+}
+
+.advisor-content{
+
+    flex:1;
+
+}
+
+.advisor-content h3{
+
+    color:#024b40;
+
+    margin-bottom:8px;
+
+    font-size:1.4rem;
+
+}
+
+.advisor-content span{
+
+    color:#f68221;
+
+    font-weight:600;
+
+    display:block;
+
+    margin-bottom:15px;
+
+}
+
+.advisor-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.advisor-social{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.advisor-social a{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#024b40;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.advisor-social a:hover{
+
+    background:#f68221;
+
+    transform:translateY(-4px);
+
+}
+
+@media(max-width:768px){
+
+    .advisor-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .advisor-social{
+
+        justify-content:center;
+
+    }
+
+}
+
+/*=========================================
+        ORGANISATIONAL STRUCTURE
+=========================================*/
+
+.structure{
+
+    padding:120px 0;
+
+    background:#f8fafc;
+
+}
+
+.structure-tree{
+
+    max-width:1000px;
+
+    margin:70px auto 0;
+
+}
+
+.structure-level{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.structure-row{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+
+    gap:25px;
+
+    margin:20px 0;
+
+}
+
+.structure-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px 25px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border-top:5px solid #024b40;
+
+}
+
+.structure-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.structure-card i{
+
+    font-size:3rem;
+
+    color:#f68221;
+
+    margin-bottom:18px;
+
+}
+
+.structure-card h3{
+
+    color:#024b40;
+
+    margin-bottom:12px;
+
+}
+
+.structure-card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+.structure-arrow{
+
+    text-align:center;
+
+    margin:18px 0;
+
+}
+
+.structure-arrow i{
+
+    font-size:2rem;
+
+    color:#f68221;
+
+}
+
+.board{
+
+    border-top-color:#024b40;
+
+}
+
+.founder{
+
+    border-top-color:#f68221;
+
+}
+
+.committee{
+
+    border-top-color:#024b40;
+
+}
+
+.volunteers{
+
+    border-top-color:#f68221;
+
+}
+
+@media(max-width:768px){
+
+    .structure{
+
+        padding:80px 0;
+
+    }
+
+}
+
+/* ============================================================
+   20. VOLUNTEERS / COMMUNITY CHAMPIONS
+   ============================================================ */
+
+.champions {
+
+    background: var(--background);
+
+}
+
+
+.champions-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 60px;
+
+    align-items: center;
+
+}
+
+
+.champions-image {
+
+    overflow: hidden;
+
+    border-radius: var(--radius-lg);
+
+}
+
+
+.champions-image img {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+}
+
+
+.champions-content h2 {
+
+    margin-bottom: 15px;
+
+    color: var(--primary);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        2.8rem
+    );
+
+    line-height: 1.15;
+
+}
+
+
+.champions-content h2 span {
+
+    color: var(--orange);
+
+}
+
+
+.champions-content > p {
+
+    margin-bottom: 25px;
+
+    color: var(--text-light);
+
+    line-height: 1.75;
+
+}
+
+
+.champions-content ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    margin: 0 0 28px;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.champions-content li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: var(--text);
+
+    font-size: 0.9rem;
+
+}
+
+
+.champions-content li i {
+
+    flex-shrink: 0;
+
+    color: var(--primary);
+
+    font-size: 1.1rem;
+
+}
+
+
+/* ============================================================
+   21. TEAM CTA
+   ============================================================ */
+
+.team-cta {
+
+    background: var(--white);
+
+}
+
+
+.cta-box {
+
+    padding: 65px 30px;
+
+    text-align: center;
+
+    background: var(--primary);
+
+    border-radius: var(--radius-lg);
+
+}
+
+
+.cta-box .section-label {
+
+    color: #ffd0a6;
+
+}
+
+
+.cta-box h2 {
+
+    max-width: 750px;
+
+    margin: 0 auto 15px;
+
+    color: var(--white);
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3rem
+    );
+
+    line-height: 1.15;
+
+}
+
+
+.cta-box h2 span {
+
+    color: var(--orange);
+
+}
+
+
+.cta-box > p {
+
+    max-width: 680px;
+
+    margin: 0 auto 28px;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.82
+    );
+
+    line-height: 1.7;
+
+}
+
+
+.cta-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+/* ============================================================
+   22. FOOTER
+   ============================================================ */
+
+.footer {
+
+    padding-top: 70px;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.75
+    );
+
+    background: #013c34;
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        0.8fr
+        0.9fr
+        1.1fr;
+
+    gap: 45px;
+
+    padding-bottom: 50px;
+
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: var(--white);
+
+    font-weight: 700;
+
+}
+
+
+.footer-logo img {
+
+    width: 45px;
+
+    height: 45px;
+
+    object-fit: contain;
+
+}
+
+
+.footer-column > p {
+
+    max-width: 340px;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.68
+    );
+
+    font-size: 0.87rem;
+
+    line-height: 1.7;
+
+}
+
+
+.footer-column h3 {
+
+    margin-bottom: 17px;
+
+    color: var(--white);
+
+    font-size: 1rem;
+
+}
+
+
+.footer-column ul {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+
+.footer-column li,
+.footer-column li a {
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.68
+    );
+
+    font-size: 0.84rem;
+
+}
+
+
+.footer-column li a:hover {
+
+    color: var(--orange);
+
+}
+
+
+/* ============================================================
+   23. SOCIAL LINKS
+   ============================================================ */
+
+.social-links {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+}
+
+
+.social-links a {
+
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--white);
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.1
+    );
+
+    border-radius: 50%;
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.social-links a:hover {
+
+    background: var(--orange);
+
+}
+
+
+/* ============================================================
+   24. CONTACT LIST
+   ============================================================ */
+
+.contact-list li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+}
+
+
+.contact-list i {
+
+    flex-shrink: 0;
+
+    color: var(--orange);
+
+    font-size: 1.05rem;
+
+}
+
+
+/* ============================================================
+   25. NEWSLETTER
+   ============================================================ */
+
+.newsletter {
+
+    margin-top: 25px;
+
+}
+
+
+.newsletter h4 {
+
+    margin-bottom: 10px;
+
+    color: var(--white);
+
+    font-size: 0.9rem;
+
+}
+
+
+.newsletter form {
+
+    display: flex;
+
+    max-width: 300px;
+
+}
+
+
+.newsletter input {
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 11px 13px;
+
+    color: var(--white);
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.08
+    );
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.18
+    );
+
+    outline: none;
+
+    border-radius: 6px 0 0 6px;
+
+}
+
+
+.newsletter input::placeholder {
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.5
+    );
+
+}
+
+
+.newsletter button {
+
+    width: 44px;
+
+    flex-shrink: 0;
+
+    color: var(--white);
+
+    background: var(--orange);
+
+    border-radius: 0 6px 6px 0;
+
+}
+
+
+#newsletterMessage {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 0.75rem;
+
+}
+
+
+/* ============================================================
+   26. FOOTER BOTTOM
+   ============================================================ */
+
+.footer-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.1
+    );
+
+}
+
+
+.footer-bottom p {
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.58
+    );
+
+    font-size: 0.78rem;
+
+}
+
+
+.back-top {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--white);
+
+    background: var(--orange);
+
+    border-radius: 7px;
+
+}
+
+
+/* ============================================================
+   27. REVEAL ANIMATION
+   Minimal animation
+   ============================================================ */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(12px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+
+}
+
+
+.reveal.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ============================================================
+   28. TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+    .desktop-nav {
+
+        gap: 16px;
+
+    }
+
+
+    .nav-actions {
+
+        gap: 6px;
+
+    }
+
+
+    .nav-actions .btn {
+
+        padding-inline: 14px;
+
+    }
+
+
+    .team-values {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* ============================================================
+   29. MOBILE NAVIGATION BREAKPOINT
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .desktop-nav,
+    .nav-actions {
+
+        display: none;
+
+    }
+
+
+    .menu-btn {
+
+        display: flex;
+
+    }
+
+
+    .nav-container {
+
+        min-height: 70px;
+
+    }
+
+
+    .team-hero {
+
+        min-height: 560px;
+
+    }
+
+
+    .leadership-grid,
+    .team-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .champions-grid {
+
+        gap: 40px;
+
+    }
+
+}
+
+
+/* ============================================================
+   30. SMALL TABLET
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+    .section {
+
+        padding: 70px 0;
+
+    }
+
+
+    .team-hero {
+
+        min-height: 520px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 2.6rem;
+
+    }
+
+
+    .team-values {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .leadership-grid,
+    .team-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .champions-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .champions-image {
+
+        max-width: 650px;
+
+        margin-inline: auto;
+
+    }
+
+}
+
+
+/* ============================================================
+   31. SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 500px) {
+
+    .logo img {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .logo-text strong {
+
+        font-size: 0.8rem;
+
+    }
+
+
+    .logo-text small {
+
+        font-size: 0.55rem;
+
+    }
+
+
+    .team-hero {
+
+        min-height: 500px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 2.25rem;
+
+    }
+
+
+    .hero-content > p {
+
+        font-size: 0.92rem;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .cta-box {
+
+        padding: 45px 20px;
+
+    }
+
+
+    .cta-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .cta-buttons .btn {
+
+        width: 100%;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* ============================================================
+   32. ACCESSIBILITY / REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+
+    .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+}
+/* ============================================================
+   LEADERSHIP STRUCTURE
+   Three-part leadership layout
+   ============================================================ */
+
+
+/* ============================================================
+   1. LEADERSHIP PART
+   ============================================================ */
+
+.leadership-part {
+
+    margin-top: 75px;
+
+}
+
+
+.leadership-part:first-of-type {
+
+    margin-top: 0;
+
+}
+
+
+/* ============================================================
+   2. PART HEADING
+   ============================================================ */
+
+.leadership-part-heading {
+
+    max-width: 720px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.part-number {
+
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: var(--orange);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.leadership-part-heading h3 {
+
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-size: 1.8rem;
+
+    line-height: 1.2;
+
+}
+
+
+.leadership-part-heading p {
+
+    max-width: 650px;
+
+    color: var(--text-light);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* ============================================================
+   3. FOUNDER & CO-FOUNDER
+   ============================================================ */
+
+.founder-grid {
+
+    grid-template-columns:
+        repeat(2, minmax(0, 360px));
+
+    justify-content: center;
+
+}
+
+
+.founder-part .leader-card {
+
+    border-top: 4px solid var(--orange);
+
+}
+
+
+/* ============================================================
+   4. CORE TEAM
+   ============================================================ */
+
+.core-team-part {
+
+    padding-top: 10px;
+
+}
+
+
+/* ============================================================
+   5. ADVISORY BOARD
+   ============================================================ */
+
+.advisory-part {
+
+    padding: 45px 35px;
+
+    background: var(--light-green);
+
+    border-radius: var(--radius-lg);
+
+}
+
+
+.advisory-grid {
+
+    margin-top: 5px;
+
+}
+
+
+.advisory-card {
+
+    background: var(--white);
+
+}
+
+
+/* ============================================================
+   6. RESPONSIVE LEADERSHIP
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .founder-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .leadership-part {
+
+        margin-top: 55px;
+
+    }
+
+
+    .founder-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .advisory-part {
+
+        padding: 35px 20px;
+
+    }
+
+
+    .leadership-part-heading h3 {
+
+        font-size: 1.55rem;
+
+    }
+
+}

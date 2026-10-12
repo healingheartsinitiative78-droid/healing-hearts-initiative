@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Healing Hearts Initiative, a youth-led organization in Rwanda working for mental health, psychosocial wellbeing and youth empowerment.">
+    <title>Donate | Healing Hearts Initiative</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="donate.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="images/HHI LOGO.png" alt="">
+            <span>Healing Hearts <strong>Initiative(HHI)</strong></span>
+        </a>
+
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about us/about.html">About</a>
+            <a href="programs/programs.html">Programs</a>
+            <a href="team contents/team.html">Team</a>
+            <a href="gallery/gallery.html">Gallery</a>
+            <a href="contact/contact.html">Contact</a>
+            <a class="nav-donate active" href="donate.html" aria-current="page">Donate</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
+            <i class="ri-menu-line" aria-hidden="true"></i>
+        </button>
+    </header>
+
+    <main>
+    <!-- Hero section: paste this inside <main> in donate.html -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Help a young person feel heard.</h1>
+        <p>Healing Hearts Initiative(HHI) is a youth-led organization in Rwanda. Your gift helps us talk openly about mental health, create safe places for young people, and support our communities.</p>
+        <a class="button button-orange" href="#donate-form">Make a donation <i class="ri-arrow-down-line" aria-hidden="true"></i></a>
+    </div>
+    <figure class="hero-photo">
+        <img src="donate.jpeg" alt="The Healing Hearts Initiative team with young people in Rwanda" fetchpriority="high">
+    </figure>
+</section>
+
+        <section class="impact section-wrap">
+            <div class="section-heading">
+                <h2>What your support helps us do</h2>
+                <p>Too many young people carry difficult feelings alone. Here is how we work to change that.</p>
+            </div>
+            <div class="impact-grid">
+                <article class="impact-card">
+                    <span class="impact-icon"><i class="ri-chat-heart-line" aria-hidden="true"></i></span>
+                    <h3>Talk openly about mental health</h3>
+                    <p>We run awareness activities that help people understand mental health and challenge the stigma around it.</p>
+                </article>
+                <article class="impact-card">
+                    <span class="impact-icon"><i class="ri-group-line" aria-hidden="true"></i></span>
+                    <h3>Build safe spaces</h3>
+                    <p>We make room for young people to feel heard, respected and included in their communities.</p>
+                </article>
+                <article class="impact-card">
+                    <span class="impact-icon"><i class="ri-seedling-line" aria-hidden="true"></i></span>
+                    <h3>Help young people grow</h3>
+                    <p>We support learning, connection and activities that strengthen wellbeing.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="donation-area" id="donate-form">
+            <div class="donation-layout section-wrap">
+                <div class="donation-copy">
+                    <h2>Choose how much to give</h2>
+                    <p>Enter an amount and pick how you'd like to reach us. We'll reply with our payment details and help you complete your gift.</p>
+                    <div class="reassurance">
+                        <i class="ri-shield-check-line" aria-hidden="true"></i>
+                        <p><strong>Check before you send</strong><br>Only use payment details that come from our team. If you're not sure, ask us first.</p>
+                    </div>
+                </div>
+
+                <div class="donation-card">
+                    <form id="donationForm" novalidate>
+                        <label for="donorName">Your name <span class="optional">(optional)</span></label>
+                        <input id="donorName" name="donorName" type="text" maxlength="100" autocomplete="name" placeholder="Your name">
+
+                        <label for="donorCountry">Phone number <span class="optional">(optional)</span></label>
+                        <div class="input-group">
+                            <select id="donorCountry" name="donorCountry" aria-label="Country code" autocomplete="off"></select>
+                            <input id="donorPhone" name="donorPhone" type="tel" inputmode="tel" autocomplete="tel-national" maxlength="20" placeholder="Phone number" aria-describedby="phoneHelp">
+                        </div>
+                        <p class="field-help" id="phoneHelp">Helps us follow up on your donation. Starting with + also works, for example +44 7700 900123.</p>
+
+                        <label for="donorAmount">Amount <span class="required" aria-hidden="true">*</span></label>
+                        <div class="input-group">
+                            <select id="donorCurrency" name="donorCurrency" aria-label="Currency" autocomplete="off"></select>
+                            <input id="donorAmount" name="donorAmount" type="number" min="0" step="any" inputmode="decimal" placeholder="e.g. 10000" required aria-describedby="amountHelp">
+                        </div>
+                        <p class="field-help" id="amountHelp">Any amount helps. Give what feels comfortable.</p>
+
+                        <label for="donorCategory">Where should your gift go?</label>
+                        <select id="donorCategory" name="donorCategory">
+                            <option>Wherever it's needed most</option>
+                            <option>safe spaces</option>
+                            <option>Youth empowerment</option>
+                            <option>Community outreach</option>
+                            <option>Health promotion</option>
+                            <option>Capacity building</option>
+                            <option>Gender inclusion</option>
+                        </select>
+
+                        <label for="donorMessage">Message <span class="optional">(optional)</span></label>
+                        <textarea id="donorMessage" name="donorMessage" rows="3" maxlength="500" placeholder="Anything you'd like us to know?"></textarea>
+
+                        <button class="button button-green button-full" type="submit">
+                            Message us on WhatsApp <i class="ri-whatsapp-line" aria-hidden="true"></i>
+                        </button>
+                        <button class="button button-outline button-full" id="emailButton" type="button">
+                            Email us instead <i class="ri-mail-line" aria-hidden="true"></i>
+                        </button>
+                        <p class="form-note">These buttons open a ready-written message to us. They don't send money.</p>
+                        <p class="form-error" id="formError" role="alert"></p>
+                        <p class="form-status" id="formStatus" role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="steps-section">
+            <div class="section-wrap">
+                <div class="section-heading">
+                    <h2>How giving works</h2>
+                </div>
+                <div class="steps-grid">
+                    <div class="step"><span>01</span><h3>Pick an amount</h3><p>Enter what you'd like to give.</p></div>
+                    <div class="step"><span>02</span><h3>Get in touch</h3><p>Message or email us and we'll confirm how to send your gift.</p></div>
+                    <div class="step"><span>03</span><h3>Save your confirmation</h3><p>Keep your transaction reference. Contact us if you'd like us to confirm we received your gift.</p></div>
+                </div>
+            </div>
+        </section>
+
+       
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="index.html">
+            <img src="images/HHI LOGO.png" alt="">
+            <span>Healing Hearts <strong>Initiative(HHI)</strong></span>
+        </a>
+        <p>Promoting mental health, psychosocial wellbeing and youth empowerment in Rwanda.</p>
+        <p class="copyright">© <span id="currentYear">2026</span> Healing Hearts Initiative(HHI). All rights reserved.</p>
+    </footer>
+
+    <script src="donate.js"></script>
+</body>
+</html>

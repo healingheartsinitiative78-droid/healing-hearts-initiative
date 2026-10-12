@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         1. BASIC PAGE INFORMATION
+         ===================================================== -->
+
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Description used by search engines -->
+    <meta
+        name="description"
+        content="Healing Heart Initiative programs: mental health, youth empowerment, education, community development, health and wellness, gender inclusion, and research."
+    >
+
+    <!-- Browser tab title -->
+    <title>Our Programs | Healing Heart Initiative</title>
+
+
+    <!-- =====================================================
+         2. EXTERNAL RESOURCES
+         ===================================================== -->
+
+    <!-- Remix Icon library -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    >
+
+    <!-- Programs page stylesheet -->
+    <link rel="stylesheet" href="programs.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         3. WEBSITE HEADER / DESKTOP NAVIGATION
+         ===================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container nav-container">
+
+
+            <!-- -------------------------------------------------
+                 3.1 HHI LOGO
+                 ------------------------------------------------- -->
+
+            <a
+                href="../index.html"
+                class="logo"
+                aria-label="Healing Heart Initiative home"
+            >
+
+                <img
+                    src="../images/HHI LOGO.png"
+                    alt="Healing Heart Initiative Logo"
+                >
+
+                <span class="logo-text">
+                    <strong>Healing Hearts</strong>
+                    <small>Initiative(HHI)</small>
+                </span>
+
+            </a>
+
+
+            <!-- -------------------------------------------------
+                 3.2 DESKTOP NAVIGATION
+                 ------------------------------------------------- -->
+
+            <nav
+                class="desktop-nav"
+                aria-label="Main navigation"
+            >
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../about us/about.html">
+                    About
+                </a>
+
+                <!-- Current page -->
+                <a href="programs.html" class="active">
+                    Programs
+                </a>
+
+                <a href="../team contents/team.html">
+                    Team
+                </a>
+
+                <a href="../gallery/gallery.html">
+                    Gallery
+                </a>
+
+                <a href="../contact/contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- -------------------------------------------------
+                 3.3 HEADER ACTION BUTTONS
+                 ------------------------------------------------- -->
+
+            <div class="nav-actions">
+
+                <a
+                    href="../volunteer/volunteer.html"
+                    class="btn btn-light"
+                >
+                    Volunteer
+                </a>
+
+                <a
+                    href="../donate.html"
+                    class="btn btn-orange"
+                >
+                    Donate
+                </a>
+
+            </div>
+
+
+            <!-- -------------------------------------------------
+                 3.4 MOBILE MENU BUTTON
+                 ------------------------------------------------- -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+            >
+
+                <i class="ri-menu-3-line"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         4. MOBILE MENU OVERLAY
+         =====================================================
+
+         This dark overlay appears behind the mobile menu.
+         JavaScript controls its visibility.
+         ===================================================== -->
+
+    <div
+        class="menu-overlay"
+        id="menuOverlay"
+    ></div>
+
+
+
+    <!-- =====================================================
+         5. MOBILE NAVIGATION MENU
+         ===================================================== -->
+
+    <aside
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-hidden="true"
+    >
+
+        <!-- Mobile menu header -->
+        <div class="mobile-menu-header">
+
+            <span>Menu</span>
+
+            <button
+                class="menu-close"
+                id="menuClose"
+                type="button"
+                aria-label="Close menu"
+            >
+
+                <i class="ri-close-line"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- -------------------------------------------------
+             5.1 MOBILE NAVIGATION LINKS
+             ------------------------------------------------- -->
+
+        <nav
+            class="mobile-nav"
+            aria-label="Mobile navigation"
+        >
+
+            <a href="../index.html">
+                <i class="ri-home-5-line"></i>
+                Home
+            </a>
+
+            <a href="../about us/about.html">
+                <i class="ri-information-line"></i>
+                About
+            </a>
+
+            <!-- Current page -->
+            <a
+                href="programs.html"
+                class="active"
+            >
+                <i class="ri-heart-pulse-line"></i>
+                Programs
+            </a>
+
+            <a href="../team contents/team.html">
+                <i class="ri-team-line"></i>
+                Team
+            </a>
+
+            <a href="../gallery/gallery.html">
+                <i class="ri-image-line"></i>
+                Gallery
+            </a>
+
+            <a href="../contact/contact.html">
+                <i class="ri-mail-line"></i>
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- -------------------------------------------------
+             5.2 MOBILE ACTION BUTTONS
+             ------------------------------------------------- -->
+
+        <div class="mobile-actions">
+
+            <a
+                href="../volunteer/volunteer.html"
+                class="btn btn-outline"
+            >
+                Volunteer
+            </a>
+
+            <a
+                href="../donate.html"
+                class="btn btn-orange"
+            >
+                Donate
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         6. MAIN PAGE CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             6.1 HERO SECTION
+             ================================================= -->
+
+        <section class="hero">
+
+            <!-- Hero background overlay -->
+            <div class="hero-overlay"></div>
+
+
+            <div class="container hero-content">
+
+
+                <!-- Small label above the heading -->
+                <span class="eyebrow">
+
+                    <i class="ri-heart-pulse-fill"></i>
+
+                    Healing Hearts Initiative(HHI)
+
+                </span>
+
+
+                <!-- Main page heading -->
+                <h1>
+                    Our <span>Programs</span>
+                </h1>
+
+
+                <!-- Hero description -->
+                <p>
+                    We empower individuals, strengthen families, and transform
+                    communities through mental health, youth leadership,
+                    education, health promotion, social inclusion,
+                    and evidence-informed research.
+                </p>
+
+
+                <!-- Hero buttons -->
+                <div class="hero-buttons">
+
+                    <!-- Scroll to programs -->
+                    <a
+                        href="#programs"
+                        class="btn btn-orange btn-large"
+                    >
+                        Explore Programs
+                        <i class="ri-arrow-down-line"></i>
+                    </a>
+
+
+                    <!-- Contact page -->
+                    <a
+                        href="../contact/contact.html"
+                        class="btn btn-ghost btn-large"
+                    >
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             6.2 PROGRAM OVERVIEW
+             ================================================= -->
+
+        <section
+            class="overview section"
+            id="programs"
+        >
+
+            <div class="container">
+
+
+                <!-- Section heading -->
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        OUR FOCUS AREAS
+                    </span>
+
+                    <h2>
+                        Programs That
+                        <span>Transform Lives</span>
+                    </h2>
+
+                    <p>
+                        Our programs connect health, education, empowerment,
+                        community action, inclusion, and research to create
+                        practical and sustainable impact.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     6.2.1 PROGRAM CARDS
+                     ================================================= -->
+
+                <div class="program-grid">
+
+
+                    <!-- -------------------------------------------------
+                         PROGRAM 01 — MENTAL HEALTH
+                         ------------------------------------------------- -->
+
+                    <article class="program-card reveal">
+
+                        <div class="card-image">
+
+                            <img
+                                src="../images/psycosocial support and empowerment.jpeg"
+                                alt="Mental health and psychosocial support"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <div class="card-icon">
+                                <i class="ri-heart-pulse-line"></i>
+                            </div>
+
+                            <h3>
+                                Mental Health Support
+                            </h3>
+
+                            <p>
+                                Counselling, psychosocial support, mental
+                                wellness education, awareness, resilience
+                                building, and appropriate referral pathways.
+                            </p>
+
+                            <a
+                                href="#mental-health"
+                                class="learn-more"
+                            >
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- -------------------------------------------------
+                         PROGRAM 02 — YOUTH EMPOWERMENT
+                         ------------------------------------------------- -->
+
+                    <article class="program-card reveal">
+
+                        <div class="card-image">
+
+                            <img
+                                src="../images/BG 4.jpeg"
+                                alt="Youth empowerment activities"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <div class="card-icon">
+                                <i class="ri-group-line"></i>
+                            </div>
+
+                            <h3>
+                                Youth Empowerment
+                            </h3>
+
+                            <p>
+                                Leadership, life skills, entrepreneurship,
+                                digital literacy, financial literacy,
+                                participation, and opportunities for
+                                young people.
+                            </p>
+
+                            <a
+                                href="#youth"
+                                class="learn-more"
+                            >
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- -------------------------------------------------
+                         PROGRAM 03 — EDUCATION
+                         ------------------------------------------------- -->
+
+                    <article class="program-card reveal">
+
+                        <div class="card-image">
+
+                            <img
+                                src="../images/BG 1.jpeg"
+                                alt="Education and capacity building"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <div class="card-icon">
+                                <i class="ri-book-open-line"></i>
+                            </div>
+
+                            <h3>
+                                Education Support
+                            </h3>
+
+                            <p>
+                                Health education, digital literacy, training,
+                                capacity building, knowledge sharing,
+                                and learning opportunities.
+                            </p>
+
+                            <a
+                                href="#education"
+                                class="learn-more"
+                            >
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- -------------------------------------------------
+                         PROGRAM 04 — COMMUNITY DEVELOPMENT
+                         ------------------------------------------------- -->
+
+                    <article class="program-card reveal">
+
+                        <div class="card-image">
+
+                            <img
+                                src="../images/BG 5.jpeg"
+                                alt="Community development and outreach"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <div class="card-icon">
+                                <i class="ri-community-line"></i>
+                            </div>
+
+                            <h3>
+                                Community Development
+                            </h3>
+
+                            <p>
+                                Community awareness, outreach, volunteerism,
+                                school engagement, partnerships, and
+                                locally driven solutions.
+                            </p>
+
+                            <a
+                                href="#community"
+                                class="learn-more"
+                            >
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- -------------------------------------------------
+                         PROGRAM 05 — HEALTH & WELLNESS
+                         ------------------------------------------------- -->
+
+                    <article class="program-card reveal">
+
+                        <div class="card-image">
+
+                            <img
+                                src="../images/image 14.jpeg"
+                                alt="Health and wellness promotion"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <div class="card-icon">
+                                <i class="ri-hospital-line"></i>
+                            </div>
+
+                            <h3>
+                                Health &amp; Wellness
+                            </h3>
+
+                            <p>
+                                Preventive health education, healthy lifestyles,
+                                nutrition, hygiene, and awareness that supports
+                                healthier communities.
+                            </p>
+
+                            <a
+                                href="#health"
+                                class="learn-more"
+                            >
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- -------------------------------------------------
+                         PROGRAM 06 — GENDER & SOCIAL INCLUSION
+                         ------------------------------------------------- -->
+
+                    <article class="program-card reveal">
+
+                        <div class="card-image">
+
+                            <img
+                                src="../images/image 17.jpeg"
+                                alt="Gender and social inclusion"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <div class="card-icon">
+                                <i class="ri-scales-line"></i>
+                            </div>
+
+                            <h3>
+                                Gender &amp; Social Inclusion
+                            </h3>
+
+                            <p>
+                                Equality, dignity, participation,
+                                accessibility, and inclusion for women,
+                                youth, persons with disabilities,
+                                and vulnerable groups.
+                            </p>
+
+                            <a
+                                href="#gender"
+                                class="learn-more"
+                            >
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- -------------------------------------------------
+                         PROGRAM 07 — RESEARCH & EVIDENCE
+                         -------------------------------------------------
+
+                         This is the newly added HHI research program.
+                         ------------------------------------------------- -->
+
+                    <article
+                        class="program-card reveal featured-card"
+                    >
+
+                        <div class="card-image">
+
+                            <img
+                                src="../images/activity 1.jpeg"
+                                alt="Research and data collection"
+                                loading="lazy"
+                            >
+
+                            <!-- Research badge -->
+                            <span class="featured-badge">
+                                New Focus Area
+                            </span>
+
+                        </div>
+
+
+                        <div class="card-content">
+
+                            <div class="card-icon">
+                                <i class="ri-search-eye-line"></i>
+                            </div>
+
+                            <h3>
+                                Research &amp; Evidence
+                            </h3>
+
+                            <p>
+                                Community-based research, needs assessments,
+                                data collection, monitoring, evaluation,
+                                learning, and evidence generation.
+                            </p>
+
+                            <a
+                                href="#research"
+                                class="learn-more"
+                            >
+                                Learn More
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             6.3 DETAILED PROGRAM SECTIONS
+             ================================================= -->
+
+        <section class="details section">
+
+            <div class="container">
+
+
+                <!-- Detailed section heading -->
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        WHAT WE DO
+                    </span>
+
+                    <h2>
+                        Explore Our
+                        <span>Program Areas</span>
+                    </h2>
+
+                    <p>
+                        Each program is designed to address practical
+                        community needs while creating opportunities
+                        for participation, learning, and measurable impact.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PROGRAM 01 — MENTAL HEALTH
+                     ================================================= -->
+
+                <article
+                    class="detail-row reveal"
+                    id="mental-health"
+                >
+
+                    <div class="detail-image">
+
+                        <img
+                            src="../images/psycosocial support and empowerment.jpeg"
+                            alt="Mental health support"
+                        >
+
+                    </div>
+
+
+                    <div class="detail-content">
+
+                        <span class="detail-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Mental Health Support
+                        </h3>
+
+                        <p>
+                            We promote mental wellbeing through awareness,
+                            psychosocial support, basic counselling and
+                            appropriate referral to qualified services
+                            when specialized care is needed.
+                        </p>
+
+
+                        <ul>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Mental health awareness and stigma reduction
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Psychosocial support and resilience activities
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Youth-friendly wellbeing education
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Referral and community support pathways
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROGRAM 02 — YOUTH EMPOWERMENT
+                     ================================================= -->
+
+                <article
+                    class="detail-row reverse reveal"
+                    id="youth"
+                >
+
+                    <div class="detail-image">
+
+                        <img
+                            src="../images/BG 4.jpeg"
+                            alt="Youth empowerment"
+                        >
+
+                    </div>
+
+
+                    <div class="detail-content">
+
+                        <span class="detail-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Youth Empowerment
+                        </h3>
+
+                        <p>
+                            We create opportunities for young people
+                            to develop confidence, leadership, practical
+                            skills, and meaningful participation in
+                            community development.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Leadership and life-skills development
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Entrepreneurship and financial literacy
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Digital skills and innovation
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Youth-led community initiatives
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROGRAM 03 — EDUCATION SUPPORT
+                     ================================================= -->
+
+                <article
+                    class="detail-row reveal"
+                    id="education"
+                >
+
+                    <div class="detail-image">
+
+                        <img
+                            src="../images/BG 1.jpeg"
+                            alt="Education support"
+                        >
+
+                    </div>
+
+
+                    <div class="detail-content">
+
+                        <span class="detail-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Education Support
+                        </h3>
+
+                        <p>
+                            We use education and capacity building
+                            to improve access to useful knowledge,
+                            strengthen skills, and support informed
+                            decision-making.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Health and wellbeing education
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Digital literacy and learning
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Training and capacity building
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Knowledge sharing and community learning
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROGRAM 04 — COMMUNITY DEVELOPMENT
+                     ================================================= -->
+
+                <article
+                    class="detail-row reverse reveal"
+                    id="community"
+                >
+
+                    <div class="detail-image">
+
+                        <img
+                            src="../images/BG 5.jpeg"
+                            alt="Community development"
+                        >
+
+                    </div>
+
+
+                    <div class="detail-content">
+
+                        <span class="detail-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Community Development
+                        </h3>
+
+                        <p>
+                            We work with communities, schools, volunteers,
+                            and partners to identify needs, promote awareness,
+                            and support locally relevant solutions.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Community outreach and awareness
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Volunteer engagement
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                School and community activities
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Partnerships and community-led solutions
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROGRAM 05 — HEALTH & WELLNESS
+                     ================================================= -->
+
+                <article
+                    class="detail-row reveal"
+                    id="health"
+                >
+
+                    <div class="detail-image">
+
+                        <img
+                            src="../images/image 14.jpeg"
+                            alt="Health and wellness"
+                        >
+
+                    </div>
+
+
+                    <div class="detail-content">
+
+                        <span class="detail-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Health &amp; Wellness
+                        </h3>
+
+                        <p>
+                            We promote practical knowledge and behaviours
+                            that support prevention, healthy lifestyles,
+                            wellbeing, hygiene, nutrition, and stronger
+                            communities.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Preventive health education
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Nutrition and healthy lifestyle awareness
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Hygiene and health promotion
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Community health awareness campaigns
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROGRAM 06 — GENDER & SOCIAL INCLUSION
+                     ================================================= -->
+
+                <article
+                    class="detail-row reverse reveal"
+                    id="gender"
+                >
+
+                    <div class="detail-image">
+
+                        <img
+                            src="../images/image 17.jpeg"
+                            alt="Gender and social inclusion"
+                        >
+
+                    </div>
+
+
+                    <div class="detail-content">
+
+                        <span class="detail-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Gender &amp; Social Inclusion
+                        </h3>
+
+                        <p>
+                            We promote dignity, equal participation,
+                            accessibility, and opportunities for groups
+                            that can face barriers to social and economic
+                            participation.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Gender equality and inclusion awareness
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Participation of women and youth
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Disability-inclusive activities
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Community dialogue and empowerment
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROGRAM 07 — RESEARCH & EVIDENCE
+                     ================================================= -->
+
+                <article
+                    class="detail-row research-detail reveal"
+                    id="research"
+                >
+
+                    <!-- Research image -->
+                    <div class="detail-image">
+
+                        <img
+                            src="../images/activity 1.jpeg"
+                            alt="Research and evidence generation"
+                        >
+
+                        <!-- Research badge -->
+                        <span class="research-badge">
+
+                            <i class="ri-flask-line"></i>
+
+                            Evidence &amp; Learning
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- Research content -->
+                    <div class="detail-content">
+
+                        <span class="detail-number">
+                            07
+                        </span>
+
+                        <h3>
+                            Research &amp; Evidence
+                        </h3>
+
+                        <p>
+                            Our Research &amp; Evidence program generates
+                            practical knowledge that helps communities,
+                            partners, and programs better understand needs,
+                            measure results, learn what works, and improve
+                            future interventions.
+                        </p>
+
+
+                        <!-- Research activities -->
+                        <ul>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Community needs assessments and baseline studies
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Surveys, interviews, focus groups, and data collection
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Program monitoring, evaluation, and learning
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Data analysis, reports, briefs, and knowledge products
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Partnerships with universities and research institutions
+                            </li>
+
+                            <li>
+                                <i class="ri-check-line"></i>
+                                Youth participation in research and evidence generation
+                            </li>
+
+                        </ul>
+
+
+                        <!-- Important research message -->
+                        <div class="research-note">
+
+                            <i class="ri-lightbulb-line"></i>
+
+                            <span>
+                                Research findings will be used to strengthen
+                                program design, identify community priorities,
+                                and support evidence-informed decisions.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     6.3.1 RESEARCH EXPANSION
+                     ================================================= -->
+
+                <section  class="research-expansion reveal"  id="research"
+                 aria-labelledby="research-expansion-title">
+
+
+                    <!-- Research introduction -->
+                    <div class="research-expansion-head">
+
+                        <span class="section-label">
+                            RESEARCH &amp; EVIDENCE
+                        </span>
+
+                        <h2 id="research-expansion-title">
+                            Turning Community Questions Into
+                            <span>Useful Evidence</span>
+                        </h2>
+
+                        <p>
+                            Our research focus is designed to help HHI
+                            understand community priorities, improve
+                            programs, measure results, and share lessons
+                            with partners and communities.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- -------------------------------------------------
+                         RESEARCH PILLARS
+                         ------------------------------------------------- -->
+
+                    <div class="research-pillars">
+
+
+                        <!-- Community Needs -->
+                        <div class="research-pillar">
+
+                            <i class="ri-community-line"></i>
+
+                            <h3>
+                                Community Needs
+                            </h3>
+
+                            <p>
+                                Identify priorities, barriers, experiences,
+                                and service gaps through community-informed
+                                research.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Monitoring & Evaluation -->
+                        <div class="research-pillar">
+
+                            <i class="ri-bar-chart-2-line"></i>
+
+                            <h3>
+                                Monitoring &amp; Evaluation
+                            </h3>
+
+                            <p>
+                                Track activities, outputs, outcomes,
+                                and lessons to understand whether programs
+                                are meeting their objectives.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Youth Participation -->
+                        <div class="research-pillar">
+
+                            <i class="ri-user-search-line"></i>
+
+                            <h3>
+                                Youth Participation
+                            </h3>
+
+                            <p>
+                                Where appropriate and safe, involve young
+                                people in identifying questions, collecting
+                                perspectives, and interpreting findings.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Knowledge Products -->
+                        <div class="research-pillar">
+
+                            <i class="ri-file-chart-line"></i>
+
+                            <h3>
+                                Knowledge Products
+                            </h3>
+
+                            <p>
+                                Turn findings into reports, briefs,
+                                presentations, learning materials,
+                                and practical recommendations.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- -------------------------------------------------
+                         RESEARCH METHODS
+                         ------------------------------------------------- -->
+
+                    <div class="research-methods">
+
+
+                        <!-- Research methods introduction -->
+                        <div>
+
+                            <span class="method-label">
+                                RESEARCH METHODS
+                            </span>
+
+                            <h3>
+                                How We Generate Evidence
+                            </h3>
+
+                            <p>
+                                Depending on the research question,
+                                HHI may use qualitative, quantitative,
+                                or mixed approaches. Methods can include
+                                surveys, interviews, focus groups,
+                                community consultations, document review,
+                                routine program data, and program evaluation.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Research method list -->
+                        <ul>
+
+                            <li>
+                                <i class="ri-checkbox-circle-line"></i>
+                                Baseline and needs assessments
+                            </li>
+
+                            <li>
+                                <i class="ri-checkbox-circle-line"></i>
+                                Surveys and structured data collection
+                            </li>
+
+                            <li>
+                                <i class="ri-checkbox-circle-line"></i>
+                                Interviews and focus group discussions
+                            </li>
+
+                            <li>
+                                <i class="ri-checkbox-circle-line"></i>
+                                Monitoring, evaluation, and learning
+                            </li>
+
+                            <li>
+                                <i class="ri-checkbox-circle-line"></i>
+                                Data analysis and evidence synthesis
+                            </li>
+
+                            <li>
+                                <i class="ri-checkbox-circle-line"></i>
+                                Research reports and policy/practice briefs
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- -------------------------------------------------
+                         RESEARCH ETHICS
+                         ------------------------------------------------- -->
+
+                    <div class="research-ethics">
+
+                        <i class="ri-shield-check-line"></i>
+
+                        <div>
+
+                            <h3>
+                                Ethics, Privacy &amp;
+                                Participant Protection
+                            </h3>
+
+                            <p>
+                                Research involving people must protect
+                                dignity, privacy, safety, and informed
+                                participation. Projects will follow
+                                applicable ethical and data-protection
+                                requirements and seek appropriate review
+                                or approval when required. For adolescent
+                                research, participation and protection
+                                will be handled according to applicable
+                                consent/assent and safeguarding requirements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- -------------------------------------------------
+                         RESEARCH PARTNERSHIPS
+                         ------------------------------------------------- -->
+
+                    <div class="research-partnership">
+
+
+                        <!-- Partnership information -->
+                        <div>
+
+                            <span class="method-label">
+                                COLLABORATION
+                            </span>
+
+                            <h3>
+                                Research Partnerships
+                            </h3>
+
+                            <p>
+                                We aim to collaborate with universities,
+                                researchers, health and education
+                                institutions, community organizations,
+                                and other partners to strengthen research
+                                quality, capacity, dissemination, and
+                                real-world use of evidence.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Partnership CTA -->
+                        <a
+                            href="../contact/contact.html"
+                            class="btn btn-orange"
+                        >
+                            Discuss a Research Partnership
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             6.4 OUR APPROACH / IMPACT SECTION
+             ================================================= -->
+
+        <section class="impact section">
+
+            <div class="container">
+
+
+                <!-- Section heading -->
+                <div class="section-heading light-heading">
+
+                    <span class="section-label">
+                        OUR APPROACH
+                    </span>
+
+                    <h2>
+                        From <span>Evidence</span> to Impact
+                    </h2>
+
+                    <p>
+                        We connect community voices, practical action,
+                        learning, and partnerships to improve the quality
+                        and relevance of our work.
+                    </p>
+
+                </div>
+
+
+                <!-- Approach cards -->
+                <div class="approach-grid">
+
+
+                    <!-- Listen -->
+                    <div class="approach-card reveal">
+
+                        <i class="ri-community-line"></i>
+
+                        <h3>
+                            Listen
+                        </h3>
+
+                        <p>
+                            Understand community needs, experiences,
+                            and priorities.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Learn -->
+                    <div class="approach-card reveal">
+
+                        <i class="ri-search-eye-line"></i>
+
+                        <h3>
+                            Learn
+                        </h3>
+
+                        <p>
+                            Collect and use evidence to understand
+                            what works.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Act -->
+                    <div class="approach-card reveal">
+
+                        <i class="ri-lightbulb-line"></i>
+
+                        <h3>
+                            Act
+                        </h3>
+
+                        <p>
+                            Turn knowledge into practical programs
+                            and partnerships.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Improve -->
+                    <div class="approach-card reveal">
+
+                        <i class="ri-line-chart-line"></i>
+
+                        <h3>
+                            Improve
+                        </h3>
+
+                        <p>
+                            Monitor results, learn continuously,
+                            and strengthen our interventions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             6.5 CALL TO ACTION
+             ================================================= -->
+
+        <section class="cta section">
+
+            <div class="container">
+
+                <div class="cta-box reveal">
+
+                    <span class="eyebrow">
+                        Join Our Mission
+                    </span>
+
+                    <h2>
+                        Together We Can Build
+                        Healthier Communities
+                    </h2>
+
+                    <p>
+                        Volunteer, partner with us, support our programs,
+                        or collaborate with us on research and community
+                        initiatives.
+                    </p>
+
+
+                    <!-- CTA buttons -->
+                    <div class="cta-buttons">
+
+                        <a
+                            href="../volunteer/volunteer.html"
+                            class="btn btn-orange btn-large"
+                        >
+                            <i class="ri-user-heart-line"></i>
+                            Become a Volunteer
+                        </a>
+
+                        <a
+                            href="../contact/contact.html"
+                            class="btn btn-ghost btn-large"
+                        >
+                            <i class="ri-hand-heart-line"></i>
+                            Partner With Us
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         7. WEBSITE FOOTER
+         ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- =================================================
+                 7.1 FOOTER ABOUT / BRAND
+                 ================================================= -->
+
+            <div class="footer-column">
+
+                <a
+                    href="../index.html"
+                    class="footer-logo"
+                >
+
+                    <img
+                        src="../images/HHI LOGO.png"
+                        alt="Healing Heart Initiative"
+                    >
+
+                    <span>
+                        Healing Hearts Initiative(HHI)
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Healing Hearts Initiative(HHI) is a youth-led non-profit
+                    organization committed to improving mental health,
+                    empowering communities, promoting education, and
+                    advancing equitable healthcare across Rwanda.
+                </p>
+
+
+                <!-- Social media links -->
+                <div class="social-links">
+
+              
+
+                    <a
+                        href="https://www.instagram.com/healing_heartsinitiative?igsh=YmN6bXhtdTFpM2Ft"
+                        aria-label="Instagram"
+                    >
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/company/healing-hearts-initiative-hhi/"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+
+                    <a
+                        href="https://x.com/HealingHearts78"
+                        aria-label="X"
+                    >
+                        <i class="ri-twitter-x-line"></i>
+                    </a>
+
+                    <a
+                        href="https://youtube.com/@healingheartsinitiative?si=i5yEVpBNHHGfA0sW"
+                        aria-label="YouTube"
+                    >
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 7.2 FOOTER — QUICK LINKS
+                 ================================================= -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../about us/about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="programs.html">
+                            Programs
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../team contents/team.html">
+                            Our Team
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../contact/contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 7.3 FOOTER — PROGRAM LINKS
+                 ================================================= -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Programs
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#mental-health">
+                            Mental Health
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#youth">
+                            Youth Empowerment
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#education">
+                            Education
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#community">
+                            Community Development
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#health">
+                            Health &amp; Wellness
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#gender">
+                            Gender &amp; Inclusion
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#research">
+                            Research &amp; Evidence
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 7.4 FOOTER — CONTACT & NEWSLETTER
+                 ================================================= -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+
+                <!-- Contact information -->
+                <ul class="contact-list">
+
+                    <li>
+
+                        <i class="ri-map-pin-fill"></i>
+
+                        <span>
+                            Kigali, Rwanda
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="ri-phone-fill"></i>
+
+                        <span>
+                             +250 783 007 675
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="ri-mail-fill"></i>
+
+                        <span>
+                            healingheartsinitiative78@gmail.com
+                        </span>
+
+                    </li>
+
+                </ul>
+
+
+                <!-- -------------------------------------------------
+                     NEWSLETTER
+                     ------------------------------------------------- -->
+
+                <div class="newsletter">
+
+                    <h4>
+                        Subscribe
+                    </h4>
+
+
+                    <!--
+                        This form is currently handled by JavaScript.
+                        It does not yet save emails to a database.
+                    -->
+
+                    <form id="newsletterForm">
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            placeholder="Your email"
+                            aria-label="Your email"
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            aria-label="Subscribe"
+                        >
+
+                            <i class="ri-send-plane-fill"></i>
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- JavaScript displays the success message here -->
+                    <small
+                        id="newsletterMessage"
+                        aria-live="polite"
+                    ></small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             8. FOOTER BOTTOM / COPYRIGHT
+             ===================================================== -->
+
+        <div class="container footer-bottom">
+
+            <p>
+                &copy; 2026 Healing Hearts Initiative(HHI).
+                All Rights Reserved.
+            </p>
+
+
+            <!-- Back-to-top button -->
+            <a
+                href="#"
+                class="back-top"
+                id="backTop"
+                aria-label="Back to top"
+            >
+
+                <i class="ri-arrow-up-line"></i>
+
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         9. JAVASCRIPT
+         =====================================================
+
+         Loaded at the end of the body so the HTML elements
+         already exist when JavaScript starts working with them.
+         ===================================================== -->
+
+    <script src="programs.js"></script>
+
+</body>
+
+</html>
